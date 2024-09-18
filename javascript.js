@@ -11,7 +11,7 @@ for (let rowNum = 0; rowNum < 16; rowNum++) {
         console.log(columnNum);
         boardDivs[rowNum][columnNum] = document.createElement("div");
         boardDivs[rowNum][columnNum].innerText = `${columnNum}`;
-        boardDivs[rowNum][columnNum].classList.add("rowOne");
+        boardDivs[rowNum][columnNum].classList.add("gridPositions");
         boardDivs[rowNum].appendChild(boardDivs[rowNum][columnNum]);
     };
 };
