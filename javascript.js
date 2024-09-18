@@ -1,11 +1,17 @@
 const sketchBoard = document.querySelector(".sketch-board");
 
-let rowOneDivs = [];
+let boardDivs = [[]];
 
-for (let i = 1; i <= 16; i++) {
-    console.log(i);
-    rowOneDivs[i] = document.createElement("div");
-    rowOneDivs[i].innerText = `${i}`;
-    rowOneDivs[i].classList.add("rowOne");
-    sketchBoard.appendChild(rowOneDivs[i]);
-}
+for (let rowNum = 0; rowNum < 16; rowNum++) {
+    boardDivs[rowNum] = document.createElement("div");
+    boardDivs[rowNum].classList.add("columns");
+    sketchBoard.appendChild(boardDivs[rowNum]);
+
+    for (let columnNum = 1; columnNum <= 16; columnNum++) {
+        console.log(columnNum);
+        boardDivs[rowNum][columnNum] = document.createElement("div");
+        boardDivs[rowNum][columnNum].innerText = `${columnNum}`;
+        boardDivs[rowNum][columnNum].classList.add("rowOne");
+        boardDivs[rowNum].appendChild(boardDivs[rowNum][columnNum]);
+    };
+};

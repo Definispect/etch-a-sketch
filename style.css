@@ -1,7 +1,12 @@
 .sketch-board {
+}
+
+.columns {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .rowOne {
     color: blue;
+    
 }
